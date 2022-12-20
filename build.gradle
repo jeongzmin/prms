@@ -38,6 +38,24 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	// -- spring-boot-starter
 	
+//org.slf4j.impl.StaticLoggerBinder
+	implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.6'
+//	implementation 'org.slf4j:slf4j-api:1.7.35'
+//	implementation 'ch.qos.logback:logback-classic:1.2.0'
+	implementation 'ch.qos.logback:logback-classic:1.4.5'
+	implementation 'ch.qos.logback.contrib:logback-jackson:0.1.5'
+	implementation 'ch.qos.logback.contrib:logback-json-classic:0.1.5'
+	
+	testImplementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.6'
+//	testImplementation 'org.slf4j:slf4j-api:1.7.35'
+//	testImplementation 'ch.qos.logback:logback-classic:1.2.0'
+	testImplementation 'ch.qos.logback:logback-classic:1.4.5'
+	testImplementation 'ch.qos.logback.contrib:logback-jackson:0.1.5'
+	testImplementation 'ch.qos.logback.contrib:logback-json-classic:0.1.5'
+	
+	compileOnly("ch.qos.logback.contrib:logback-jackson:0.1.5");
+	compileOnly("ch.qos.logback.contrib:logback-json-classic:0.1.5");
+	
 }
 
 tasks.named('test') {
