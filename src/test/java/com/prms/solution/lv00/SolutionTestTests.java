@@ -34,11 +34,8 @@ class SolutionTestTests {
 		drawLine(logger);
 	}
 	
-	/*
-	 * 기초 데이터 값
-	 */
-	@DisplayName("기초 데이터 값")
-	private static Stream<Arguments> setParameter() {
+	@DisplayName("분수의덧셈 기초 데이터 값")
+	private static Stream<Arguments> 분수의덧셈_parameter() {
 	    return Stream.of(
     		Arguments.of(1, 2, 2, 4),
     		Arguments.of(1, 10, 2, 20),
@@ -47,27 +44,29 @@ class SolutionTestTests {
 	    );
 	}
 	
-	/*
-	 * 기대 결과 값
-	 */
-	@DisplayName("기대 결과 값")
-	private static Stream<Arguments> endParameter() {
-		return Stream.of(
-				Arguments.of(1, 2),
-				Arguments.of(9, 2)
-			);
-	}
-
 //	@DisplayName("분수의덧셈 Tests")
 	@ParameterizedTest(name ="{index} {displayName} message = {0}, {1}, {2}, {3}")
 //	@ParameterizedTest(name ="{index} {displayName} message = {0}")
-	@MethodSource("setParameter")
+	@MethodSource("분수의덧셈_parameter")
 //	@NullSource
 //	@EmptySource
 	void 분수의덧셈(int denum1, int num1, int denum2, int num2) throws Exception{
 		int[] answer = {};
 		
 		answer = service.분수의덧셈( denum1, num1, denum2, num2 );
+		
+		logger.debug("answer = {}", answer);
+	}
+	
+	@DisplayName("배열두배만들기 Tests")
+//	@ParameterizedTest(name ="{index} {displayName} message = {0}")
+	@MethodSource("배열두배만들기_parameter")
+//	@NullSource
+//	@EmptySource
+	void 배열두배만들기(int[] numbers) throws Exception{
+		int[] answer = {};
+		
+//		정수 배열 numbers가 매개변수로 주어집니다. numbers의 각 원소에 두배한 원소를 가진 배열을 return하도록 solution 함수를 완성해주세요.
 		
 		logger.debug("answer = {}", answer);
 	}
