@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.prms.solution.lv00.Lv00Service;
+import com.prms.solution.lv00.oneService;
 
 @SpringBootTest
 class PrmsApplicationTests {
 
 	@Autowired
-	private Lv00Service lv00Application;
+	private oneService lv00Application;
 	
 	@Test
 	void contextLoads() {
