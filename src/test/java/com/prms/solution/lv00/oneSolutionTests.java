@@ -43,7 +43,7 @@ class oneSolutionTests {
         
         logger.debug("입력값 = {}, {}, {}", my_string, num1, num2);
         
-        service.인덱스바꾸기(my_string, num1, num2);
+        answer = service.인덱스바꾸기(my_string, num1, num2);
         
         logger.debug("출력값 = {}", answer);
         
