@@ -34,17 +34,6 @@ public class NumericalFormulaUtil {
 	public static int lcd(int a, int b){
 		return a * b / gcd(a,b);
 	}
-//	public static int lcd(int[] a){
-//		if(a.length == 0 && a.length == 1) return 0;
-//		int size = a.length; 
-//		int result = 0;
-//		for (int i = 1; i < size; i++) {
-//			a[i] = lcd(a[i-1], a[i]);
-//			result = a[i];
-//		}
-//		return result; 
-//	}
-//	
 	
 	/*
 	 * 각 두수의 공배수 구하기 (common multiple, CM)

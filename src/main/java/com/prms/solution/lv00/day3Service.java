@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import com.prms.util.NumericalFormulaUtil;
 
 @Service
-public class zeroService {
+public class day3Service {
 	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 

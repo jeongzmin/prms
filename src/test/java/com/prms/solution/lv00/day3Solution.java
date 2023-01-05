@@ -18,10 +18,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @DisplayName("JUnit Exam")
-class zeroSolutionTests {
+class day3Solution {
 	
 	@Autowired
-	private zeroService service;
+	private day3Service service;
 	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
