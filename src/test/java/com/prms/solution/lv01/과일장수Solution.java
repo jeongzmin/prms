@@ -3,7 +3,6 @@ package com.prms.solution.lv01;
 import static com.prms.util.LogbackLineUtil.drawLine;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.stream.Stream;
 
 import org.junit.jupiter.api.AfterEach;
@@ -36,33 +35,31 @@ class 과일장수Solution {
 		drawLine(logger);
 	}
 	
-	/*
-		입출력 예
-		k	m	score													result
-		3	4	[1, 2, 3, 1, 2, 3, 1]								8
-		4	3	[4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2]			33
-	*/
 	@DisplayName("과일장수 Tests")
 	@ParameterizedTest(name = "{index} {displayName} message = {0}")
 	@MethodSource("과일장수_parameter")
 	void 과일장수(int k, int m, int numbers) throws Exception {
-		int answer = 0;
-        
+		
+		//샘플 데이터셋
+		if(true) {
+//			k = 3; m=4; numbers = 1231231;
+		}
+		
         int _numbers = numbers;
         int[] score = (new ArrayList<Integer>(){
 	        	int num = _numbers; 
 				private static final long serialVersionUID = 1L;
 				{ 
-					do{
-			            add(num % 10); num /= 10;
-			        } while  (num > 0);
+					do{ add(num % 10); num /= 10; } 
+					while (num > 0);
 				}
 			}
         ).stream().mapToInt(Integer::intValue).toArray();
 
-		logger.debug("입력값 = {}", k, m, score);
+		logger.debug("입력값 = {}, {}, {}", k, m, score);
 		
-		answer = service.과일장수(k, m, score);
+		int answer = 0;
+ 		answer = service.과일장수(k, m, score);
 		
 		logger.debug("출력값 = {}", answer );
 		
